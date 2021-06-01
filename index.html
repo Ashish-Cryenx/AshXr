@@ -182,7 +182,7 @@ let flower = new Gltf2Node({url: 'media/gltf/viking_room/table.glb'});
           let hitTestResults = frame.getHitTestResults(xrHitTestSource);
           if (hitTestResults.length > 0) {
             let pose = hitTestResults[0].getPose(xrRefSpace);
-            reticle.visible = false;
+            reticle.visible = true;
             reticle.matrix = pose.transform.matrix;
           }
         }
