@@ -59,9 +59,9 @@ let flower = new Gltf2Node({url: 'media/gltf/viking_room/table.glb'});
 
       // Having a really simple drop shadow underneath an object helps ground
       // it in the world without adding much complexity.
-    //  let shadow = new DropShadowNode();
-     // vec3.set(shadow.scale, 0.15, 0.15, 0.15);
-    //  arObject.addNode(shadow);
+      let shadow = new DropShadowNode();
+      vec3.set(shadow.scale, 1.15, 1.15, 1.15);
+      arObject.addNode(shadow);
 
       const MAX_FLOWERS = 1;
       let flowers = [];
@@ -165,7 +165,7 @@ let flower = new Gltf2Node({url: 'media/gltf/viking_room/table.glb'});
           // The reticle should already be positioned at the latest hit point, 
           // so we can just use it's matrix to save an unnecessary call to 
           // event.frame.getHitTestResults.
-          addARObjectAt(reticle.matrix);
+         // addARObjectAt(reticle.matrix);
         }
       }
 
