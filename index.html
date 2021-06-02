@@ -143,7 +143,7 @@ let flower = new Gltf2Node({url: 'media/gltf/viking_room/table.glb'});
       // specified transform.
       function addARObjectAt(matrix) {
         let newFlower = arObject.clone();
-        newFlower.visible = false;
+        newFlower.visible = true;
         newFlower.matrix = matrix;
         scene.addNode(newFlower);
 
@@ -172,7 +172,6 @@ let flower = new Gltf2Node({url: 'media/gltf/viking_room/table.glb'});
       // Called every time a XRSession requests that a new frame be drawn.
       function onXRFrame(t, frame) {
         let session = frame.session;
-      
         let pose = frame.getViewerPose(xrRefSpace);
 
         reticle.visible = false;
