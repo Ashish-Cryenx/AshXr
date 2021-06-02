@@ -142,17 +142,10 @@ let flower = new Gltf2Node({url: 'media/gltf/viking_room/table.glb'});
       // Adds a new object to the scene at the
       // specified transform.
       function addARObjectAt(matrix) {
-        let newFlower = arObject.clone();
-        newFlower.visible = true;
-        newFlower.matrix = matrix;
-        scene.addNode(newFlower);
-           flowers.push(newFlower);
-        // For performance reasons if we add too many objects start
-        // removing the oldest ones to keep the scene complexity
-        // from growing too much.
-           if (flowers.length > MAX_FLOWERS) {
-          let oldFlower = flowers.shift();
-          scene.removeNode(oldFlower);
+       
+        arObject.matrix = matrix;
+        scene.addNode(arObject);
+        
         
       
         }
