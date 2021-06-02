@@ -59,9 +59,9 @@ let flower = new Gltf2Node({url: 'media/gltf/viking_room/table.glb'});
 
       // Having a really simple drop shadow underneath an object helps ground
       // it in the world without adding much complexity.
-      let shadow = new DropShadowNode();
-      vec3.set(shadow.scale, 1.15, 1.15, 1.15);
-      arObject.addNode(shadow);
+    //  let shadow = new DropShadowNode();
+     // vec3.set(shadow.scale, 0.15, 0.15, 0.15);
+    //  arObject.addNode(shadow);
 
       const MAX_FLOWERS = 1;
       let flowers = [];
@@ -142,9 +142,8 @@ let flower = new Gltf2Node({url: 'media/gltf/viking_room/table.glb'});
       // Adds a new object to the scene at the
       // specified transform.
       function addARObjectAt(matrix) {
-       
         let newFlower = arObject.clone();
-        newFlower.visible = false;
+        newFlower.visible = true;
         newFlower.matrix = matrix;
         scene.addNode(newFlower);
 
@@ -157,8 +156,6 @@ let flower = new Gltf2Node({url: 'media/gltf/viking_room/table.glb'});
           let oldFlower = flowers.shift();
           scene.removeNode(oldFlower);
         }
-      
-        }
       }
 
       let rayOrigin = vec3.create();
@@ -168,7 +165,7 @@ let flower = new Gltf2Node({url: 'media/gltf/viking_room/table.glb'});
           // The reticle should already be positioned at the latest hit point, 
           // so we can just use it's matrix to save an unnecessary call to 
           // event.frame.getHitTestResults.
-         addARObjectAt(reticle.matrix);
+          addARObjectAt(reticle.matrix);
         }
       }
 
@@ -177,7 +174,7 @@ let flower = new Gltf2Node({url: 'media/gltf/viking_room/table.glb'});
         let session = frame.session;
         let pose = frame.getViewerPose(xrRefSpace);
 
-        reticle.visible = true;
+        reticle.visible = false;
 
         // If we have a hit test source, get its results for the frame
         // and use the pose to display a reticle in the scene.
@@ -185,9 +182,8 @@ let flower = new Gltf2Node({url: 'media/gltf/viking_room/table.glb'});
           let hitTestResults = frame.getHitTestResults(xrHitTestSource);
           if (hitTestResults.length > 0) {
             let pose = hitTestResults[0].getPose(xrRefSpace);
-           reticle.visible = true;
+            reticle.visible = true;
             reticle.matrix = pose.transform.matrix;
-           
           }
         }
 
