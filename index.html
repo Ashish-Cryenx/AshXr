@@ -143,10 +143,20 @@ let flower = new Gltf2Node({url: 'media/gltf/viking_room/table.glb'});
       // specified transform.
       function addARObjectAt(matrix) {
        
-        
-        scene.addNode(arObject);
-        
-        
+        let newFlower = arObject.clone();
+        newFlower.visible = false;
+        newFlower.matrix = matrix;
+        scene.addNode(newFlower);
+
+        flowers.push(newFlower);
+
+        // For performance reasons if we add too many objects start
+        // removing the oldest ones to keep the scene complexity
+        // from growing too much.
+        if (flowers.length > MAX_FLOWERS) {
+          let oldFlower = flowers.shift();
+          scene.removeNode(oldFlower);
+        }
       
         }
       }
