@@ -172,7 +172,7 @@ let flower = new Gltf2Node({url: 'media/gltf/viking_room/table.glb'});
       // Called every time a XRSession requests that a new frame be drawn.
       function onXRFrame(t, frame) {
         let session = frame.session;
-         xrSession.requestAnimationFrame(onXRFrame);
+         session.requestAnimationFrame(onXRFrame);
         let pose = frame.getViewerPose(xrRefSpace);
 
         reticle.visible = false;
