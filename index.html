@@ -146,7 +146,7 @@ let flower = new Gltf2Node({url: 'media/gltf/viking_room/table.glb'});
         newFlower.visible = true;
         newFlower.matrix = matrix;
         scene.addNode(newFlower);
-          
+           flowers.push(newFlower);
         // For performance reasons if we add too many objects start
         // removing the oldest ones to keep the scene complexity
         // from growing too much.
