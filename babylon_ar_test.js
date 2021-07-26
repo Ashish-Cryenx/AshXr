@@ -24,9 +24,7 @@ window.addEventListener('DOMContentLoaded', function(){
         
         let chair;
         BABYLON.SceneLoader.ImportMesh(
-            "",
-            "/",
-            "chair.glb",
+           media/gltf/viking_room/table.glb,
             scene,
             function (mesh) { 
                 chair = mesh[0].getChildTransformNodes(false)[0];
