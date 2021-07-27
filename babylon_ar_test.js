@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', function(){
           
         //   "./table.glb",
          //   scene,
-        BABYLON.SceneLoader.ImportMesh("", "https://raw.githubusercontent.com/BabylonJS/MeshesLibrary/master/", "PBR_Spheres.glb", scene,
+        BABYLON.SceneLoader.ImportMesh("", "https://dl.dropbox.com/s/dilf300t77v3mk0/", "b.glb", scene,
             function (mesh) { 
                 chair = mesh[0].getChildTransformNodes(false)[0];
                 chair.isVisible = false;
