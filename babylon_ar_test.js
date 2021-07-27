@@ -24,9 +24,8 @@ window.addEventListener('DOMContentLoaded', function(){
         
         let chair;
         BABYLON.SceneLoader.ImportMesh(
-            "",
-            "/",
-            "table.glb",
+          
+           "./table.glb",
             scene,
             function (mesh) { 
                 chair = mesh[0].getChildTransformNodes(false)[0];
