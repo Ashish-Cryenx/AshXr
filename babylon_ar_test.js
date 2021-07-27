@@ -23,10 +23,11 @@ window.addEventListener('DOMContentLoaded', function(){
         camera.upperRadiusLimit = 5;
         
         let chair;
-        BABYLON.SceneLoader.ImportMesh(
+      //  BABYLON.SceneLoader.ImportMesh(
           
-           "./table.glb",
-            scene,
+        //   "./table.glb",
+         //   scene,
+        BABYLON.SceneLoader.ImportMesh("", "https://raw.githubusercontent.com/BabylonJS/MeshesLibrary/master/", "PBR_Spheres.glb", scene,
             function (mesh) { 
                 chair = mesh[0].getChildTransformNodes(false)[0];
                 chair.isVisible = false;
