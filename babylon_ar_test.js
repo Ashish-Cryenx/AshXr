@@ -9,24 +9,6 @@ window.addEventListener('DOMContentLoaded', function(){
     
     
     
-        var loadingScreenDiv = window.document.getElementById("loadingScreen");
-
-        function customLoadingScreen() {
-            console.log("customLoadingScreen creation")
-        }
-    
-    customLoadingScreen.prototype.displayLoadingUI = function () {
-            console.log("customLoadingScreen loading")
-            loadingScreenDiv.innerHTML = "loading";
-        };
-        customLoadingScreen.prototype.hideLoadingUI = function () {
-            console.log("customLoadingScreen loaded")
-            loadingScreenDiv.style.display = "none";
-        };
-        var loadingScreen = new customLoadingScreen();
-        engine.loadingScreen = loadingScreen;
-
-        engine.displayLoadingUI();
 
     
     
@@ -61,7 +43,7 @@ window.addEventListener('DOMContentLoaded', function(){
         // onSuccess
         scene.createDefaultCamera(true, true, true);
         scene.activeCamera.alpha = Math.PI / 2;
-        engine.hideLoadingUI();
+        
     },
     function (evt) {
         // onProgress
