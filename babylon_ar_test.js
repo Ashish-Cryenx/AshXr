@@ -8,12 +8,6 @@ window.addEventListener('DOMContentLoaded', function(){
     var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true }); };
     
     
-    
-
-    
-    
-    
-    
     var createScene = async function () {
         var pushButtonCore;
         var index = 0; 
@@ -38,29 +32,6 @@ window.addEventListener('DOMContentLoaded', function(){
                 chair = mesh[0].getChildTransformNodes(false)[0];
                mesh.rotation = new BABYLON.Vector3(0, 180, 0);
                 chair.isVisible = false;
-            
-            function () {
-        // onSuccess
-        scene.createDefaultCamera(true, true, true);
-        scene.activeCamera.alpha = Math.PI / 2;
-        
-    },
-    function (evt) {
-        // onProgress
-        var loadedPercent = 0;
-        if (evt.lengthComputable) {
-            loadedPercent = (evt.loaded * 100 / evt.total).toFixed();
-        } else {
-            var dlCount = evt.loaded / (1024 * 1024);
-            loadedPercent = Math.floor(dlCount * 100.0) / 100.0;
-        }
-        // assuming "loadingScreenPercent" is an existing html element
-        document.getElementById("loadingScreenPercent").innerHTML = loadedPercent;
-    }
-            
-            
-            
-            
         });
     
         // var xr = await scene.createDefaultXRExperienceAsync({floorMeshes: []})
