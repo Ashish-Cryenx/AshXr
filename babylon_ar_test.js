@@ -110,6 +110,11 @@ engine = createDefaultEngine();
         }
     });
 
+    viewer.updateConfiguration({
+    camera: {
+        panningSensibility: 0
+    }
+});
     // Resize
     window.addEventListener("resize", function () {
         engine.resize();
