@@ -25,8 +25,6 @@ window.addEventListener('DOMContentLoaded', function(){
         let chair;
       //  BABYLON.SceneLoader.ImportMesh(
         //  https://www.dropbox.com/s/o5w0nlstfj21202/bDraco.glb?dl=0
-        
-        //https://www.dropbox.com/s/bqx4ekiwv7mkkdi/modeDraco.glb?dl=0
         //   "./table.glb",
          //   scene,
         BABYLON.SceneLoader.ImportMesh("", "https://dl.dropbox.com/s/o5w0nlstfj21202/", "bDraco.glb", scene,
@@ -35,7 +33,6 @@ window.addEventListener('DOMContentLoaded', function(){
                mesh.rotation = new BABYLON.Vector3(0, 180, 0);
                 chair.isVisible = false;
         });
-           
     
         // var xr = await scene.createDefaultXRExperienceAsync({floorMeshes: []})
         // // default is vr, change to ar
@@ -112,7 +109,6 @@ engine = createDefaultEngine();
             sceneToRender.render();
         }
     });
-
 
     // Resize
     window.addEventListener("resize", function () {
