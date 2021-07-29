@@ -35,6 +35,11 @@ window.addEventListener('DOMContentLoaded', function(){
                mesh.rotation = new BABYLON.Vector3(0, 180, 0);
                 chair.isVisible = false;
         });
+            viewer.updateConfiguration({
+    camera: {
+        panningSensibility: 0
+    }
+});
     
         // var xr = await scene.createDefaultXRExperienceAsync({floorMeshes: []})
         // // default is vr, change to ar
@@ -112,11 +117,7 @@ engine = createDefaultEngine();
         }
     });
 
-    viewer.updateConfiguration({
-    camera: {
-        panningSensibility: 0
-    }
-});
+
     // Resize
     window.addEventListener("resize", function () {
         engine.resize();
