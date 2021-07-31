@@ -18,14 +18,7 @@ window.addEventListener('DOMContentLoaded', function(){
     this._loadingDiv.innerHTML = "scene is currently loading";
     var customLoadingScreenCss = document.createElement('style');
     customLoadingScreenCss.type = 'text/css';
-    customLoadingScreenCss.innerHTML = `
-    #customLoadingScreenDiv{
-        background-color: #BB464Bcc;
-        color: white;
-        font-size:50px;
-        text-align:center;
-    }
-    `;
+   
     document.getElementsByTagName('head')[0].appendChild(customLoadingScreenCss);
     this._resizeLoadingUI();
     window.addEventListener("resize", this._resizeLoadingUI);
