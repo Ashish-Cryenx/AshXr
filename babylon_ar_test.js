@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', function(){
         var anchor = new BABYLON.TransformNode("");
         
         camera.wheelDeltaPercentage = 0.01;
-        camera.attachControl(canvas, true);
+       // camera.attachControl(canvas, true);
         camera.lowerRadiusLimit = 1.5;
         camera.upperRadiusLimit = 5;
         
