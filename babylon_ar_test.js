@@ -100,8 +100,8 @@ console.log("the available createEngine function failed. Creating the default en
 engine = createDefaultEngine();
 }
     if (!engine) throw 'engine should not be null.';
-    scene = createScene();;
-    scene.then(returnedScene => { sceneToRender = returnedScene; });
+  //  scene = createScene();;
+    //scene.then(returnedScene => { sceneToRender = returnedScene; });
     
 
     engine.runRenderLoop(function () {
