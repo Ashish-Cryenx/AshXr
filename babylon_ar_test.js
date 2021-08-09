@@ -17,13 +17,14 @@ window.addEventListener('DOMContentLoaded', function(){
         var camera = new BABYLON.ArcRotateCamera("cam", Math.PI/2, Math.PI / 2, 3, new BABYLON.Vector3(0,0.5,0));
         var light = new BABYLON.HemisphericLight("sun", new BABYLON.Vector3(0,1,0), scene);
         var anchor = new BABYLON.TransformNode("");
+        var shadowGenerator = new BABYLON.ShadowGenerator(1024, light);
         
         camera.wheelDeltaPercentage = 0.01;
         camera.attachControl(canvas, true, false);
         camera.lowerRadiusLimit = 1.5;
         camera.upperRadiusLimit = 5;
         camera.inputs.removeByType('ArcRotateCameraPointersInput');
-        
+        shadowGenerator.getShadowMap().renderList.push(chair);
         let chair;
       //  BABYLON.SceneLoader.ImportMesh(
         //  https://www.dropbox.com/s/o5w0nlstfj21202/bDraco.glb?dl=0
