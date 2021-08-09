@@ -3,7 +3,7 @@ window.addEventListener('DOMContentLoaded', function(){
     var canvas = document.getElementById("renderCanvas");
 
     var engine = null;
-    var scene = null;
+    var scene = new BABYLON.Scene(engine);
     scene.clearColor = BABYLON.Color3.White();
     scene.createDefaultEnvironment(); 
     var sceneToRender = null;
