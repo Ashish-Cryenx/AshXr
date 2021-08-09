@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', function(){
           scene.clearColor = BABYLON.Color3.White();
         scene.createDefaultEnvironment();
         createGround: false,
-skyboxSize: false,
+       skyboxSize: false;
         var camera = new BABYLON.ArcRotateCamera("cam", Math.PI/2, Math.PI / 2, 3, new BABYLON.Vector3(0,0.5,0));
         var light = new BABYLON.HemisphericLight("sun", new BABYLON.Vector3(0,1,0), scene);
         var anchor = new BABYLON.TransformNode("");
