@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', function(){
         var camera = new BABYLON.ArcRotateCamera("cam", Math.PI/2, Math.PI / 2, 3, new BABYLON.Vector3(0,0.5,0));
         var light = new BABYLON.HemisphericLight("sun", new BABYLON.Vector3(0,1,0), scene);
         var anchor = new BABYLON.TransformNode("");
-          
+        
         camera.wheelDeltaPercentage = 0.01;
         camera.attachControl(canvas, true, false);
         camera.lowerRadiusLimit = 1.5;
@@ -34,7 +34,6 @@ window.addEventListener('DOMContentLoaded', function(){
                mesh.rotation = new BABYLON.Vector3(0, 180, 0);
                 chair.isVisible = false;
         });
-       
     
         // var xr = await scene.createDefaultXRExperienceAsync({floorMeshes: []})
         // // default is vr, change to ar
