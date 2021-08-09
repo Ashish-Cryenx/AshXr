@@ -4,10 +4,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
     var engine = null;
     var scene = null;
-  
-    
     var sceneToRender = null;
-    
     var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true }); };
     
     
@@ -16,18 +13,14 @@ window.addEventListener('DOMContentLoaded', function(){
         var index = 0; 
     
         var scene = new BABYLON.Scene(engine);
-         
-    
-    
         var camera = new BABYLON.ArcRotateCamera("cam", Math.PI/2, Math.PI / 2, 3, new BABYLON.Vector3(0,0.5,0));
-       
+        var light = new BABYLON.HemisphericLight("sun", new BABYLON.Vector3(0,1,0), scene);
         var anchor = new BABYLON.TransformNode("");
         
         camera.wheelDeltaPercentage = 0.01;
-        camera.attachControl(canvas, true, false);
+        camera.attachControl(canvas, true);
         camera.lowerRadiusLimit = 1.5;
         camera.upperRadiusLimit = 5;
-        camera.inputs.removeByType('ArcRotateCameraPointersInput');
         
         let chair;
       //  BABYLON.SceneLoader.ImportMesh(
@@ -107,8 +100,8 @@ console.log("the available createEngine function failed. Creating the default en
 engine = createDefaultEngine();
 }
     if (!engine) throw 'engine should not be null.';
-    scene = createScene();;
-    scene.then(returnedScene => { sceneToRender = returnedScene; });
+  //  scene = createScene();;
+    //scene.then(returnedScene => { sceneToRender = returnedScene; });
     
 
     engine.runRenderLoop(function () {
