@@ -1,2 +1,2 @@
 # webxr-js-hit-test
-Link: https://allinreality.github.io/webxrapi_tutorial/
+Link: https://ashish-cryenx.github.io/AshXr/
