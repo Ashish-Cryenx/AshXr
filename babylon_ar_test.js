@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', function(){
         var anchor = new BABYLON.TransformNode("");
         
         camera.wheelDeltaPercentage = 0.01;
-        camera.attachControl(canvas, true);
+        camera.attachControl(canvas, true, false);
         camera.lowerRadiusLimit = 1.5;
         camera.upperRadiusLimit = 5;
         camera.inputs.removeByType('ArcRotateCameraPointersInput');
@@ -101,8 +101,8 @@ console.log("the available createEngine function failed. Creating the default en
 engine = createDefaultEngine();
 }
     if (!engine) throw 'engine should not be null.';
-  //  scene = createScene();;
-    //scene.then(returnedScene => { sceneToRender = returnedScene; });
+    scene = createScene();;
+    scene.then(returnedScene => { sceneToRender = returnedScene; });
     
 
     engine.runRenderLoop(function () {
