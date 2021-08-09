@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', function(){
     
     var sceneToRender = null;
     
-    var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { }); };
+    var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true }); };
     
     
     var createScene = async function () {
@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', function(){
 	</scene>
        
         var camera = new BABYLON.ArcRotateCamera("cam", Math.PI/2, Math.PI / 2, 3, new BABYLON.Vector3(0,0.5,0));
-        var light = new BABYLON.HemisphericLight("sun", new BABYLON.Vector3(0,1,0), scene);
+       
         var anchor = new BABYLON.TransformNode("");
         
         camera.wheelDeltaPercentage = 0.01;
