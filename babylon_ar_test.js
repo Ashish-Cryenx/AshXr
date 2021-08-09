@@ -34,6 +34,7 @@ window.addEventListener('DOMContentLoaded', function(){
                mesh.rotation = new BABYLON.Vector3(0, 180, 0);
                 chair.isVisible = false;
         });
+         scene.clearColor = new BABYLON.Color4(0, 0, 0, 0);
     
         // var xr = await scene.createDefaultXRExperienceAsync({floorMeshes: []})
         // // default is vr, change to ar
