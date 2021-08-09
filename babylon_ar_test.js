@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', function(){
     var engine = null;
     var scene = null;
   
-    scene.createDefaultEnvironment(); 
+    
     var sceneToRender = null;
     
     var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true }); };
