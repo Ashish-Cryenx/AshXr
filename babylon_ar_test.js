@@ -4,7 +4,10 @@ window.addEventListener('DOMContentLoaded', function(){
 
     var engine = null;
     var scene = null;
+    scene.clearColor = BABYLON.Color3.White();
+    scene.createDefaultEnvironment(); 
     var sceneToRender = null;
+    
     var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true }); };
     
     
