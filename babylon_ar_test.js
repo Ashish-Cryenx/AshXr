@@ -68,6 +68,7 @@ window.addEventListener('DOMContentLoaded', function(){
                 chair = mesh[0].getChildTransformNodes(false)[0];
                mesh.rotation = new BABYLON.Vector3(0, 180, 0);
                 chair.isVisible = false;
+             engine.hideLoadingUI();
         });
     
         // var xr = await scene.createDefaultXRExperienceAsync({floorMeshes: []})
