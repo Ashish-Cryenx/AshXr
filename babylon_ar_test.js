@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', function(){
         var index = 0; 
     
         var scene = new BABYLON.Scene(engine);
+        scene.clearColor = new BABYLON.Color3(1, 1, 0.6);
         var camera = new BABYLON.ArcRotateCamera("cam", Math.PI/2, Math.PI / 2, 3, new BABYLON.Vector3(0,0.5,0));
         var light = new BABYLON.HemisphericLight("sun", new BABYLON.Vector3(0,1,0), scene);
         var anchor = new BABYLON.TransformNode("");
