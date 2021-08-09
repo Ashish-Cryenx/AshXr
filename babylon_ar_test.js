@@ -7,7 +7,7 @@ BABYLON.DefaultLoadingScreen.prototype.displayLoadingUI = function () {
     }
     this._loadingDiv = document.createElement("div");
     this._loadingDiv.id = "customLoadingScreenDiv";
-    this._loadingDiv.innerHTML = "scene is currently loading";
+    this._loadingDiv.innerHTML = "CL Diode Laser Machine is Currently Loading";
     var customLoadingScreenCss = document.createElement('style');
     customLoadingScreenCss.type = 'text/css';
     customLoadingScreenCss.innerHTML = `
