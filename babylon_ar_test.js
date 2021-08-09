@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', function(){
     
     var sceneToRender = null;
     
-    var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true }); };
+    var createDefaultEngine = function() { return new BABYLON.Engine(canvas, true, { }); };
     
     
     var createScene = async function () {
