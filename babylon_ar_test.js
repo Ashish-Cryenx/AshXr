@@ -109,8 +109,8 @@ window.addEventListener('DOMContentLoaded', function(){
         console.log('anchors attached');
         anchors.onAnchorAddedObservable.add(anchor => {
             console.log('attaching', anchor);
-            chair.isVisible = true;
-            anchor.attachedNode = chair.clone("mensch");
+           // chair.isVisible = true;
+           // anchor.attachedNode = chair.clone("mensch");
             chair.isVisible = false;
         })
 
