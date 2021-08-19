@@ -57,7 +57,7 @@ window.addEventListener('DOMContentLoaded', function(){
         camera.lowerRadiusLimit = 1.5;
         camera.upperRadiusLimit = 5;
          camera.panningSensibility = 0;
-        camera.inputs.removeByType('camera.inputs.attached.rightclick');
+     //   camera.inputs.removeByType('camera.inputs.attached.rightclick');
         
       
         let chair;
