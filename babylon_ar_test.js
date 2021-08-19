@@ -89,7 +89,7 @@ window.addEventListener('DOMContentLoaded', function(){
    
     const hitTest = fm.enableFeature(BABYLON.WebXRHitTest, "latest");
 
-    const anchors = fm.enableFeature(BABYLON.WebXRAnchorSystem.Name, 'latest');
+    const anchors = fm.enableFeature(BABYLON.WebXRAnchorSystem.Name, 'latest',{ doNotRemoveAnchorsOnSessionEnded: true });
 
     const marker = BABYLON.MeshBuilder.CreateTorus('marker', { diameter: 0.15, thickness: 0.05 });
     marker.isVisible = false;
