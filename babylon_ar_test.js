@@ -70,6 +70,8 @@ window.addEventListener('DOMContentLoaded', function(){
                 chair = mesh[0].getChildTransformNodes(false)[0];
                mesh.rotation = new BABYLON.Vector3(0, 180, 0);
                 chair.isVisible = false;
+            chair.boundingBoxGizmoEnabled=true;
+             chair.gizmos.boundingBoxGizmo.setEnabledScaling(false); 
              engine.hideLoadingUI();
         });
     
